@@ -91,8 +91,6 @@ double Pow::evaluate() const {
     return pow(left_->evaluate(), right_->evaluate());
 }
 
-// TODO: Implement more functions here
-
 shared_ptr<Expr> operator*(shared_ptr<Expr> lhs, shared_ptr<Expr> rhs) {
     return std::make_shared<Prod>(lhs, rhs);
 }
@@ -101,4 +99,4 @@ shared_ptr<Expr> operator^(shared_ptr<Expr> lhs, shared_ptr<Expr> rhs) {
     return std::make_shared<Pow>(lhs, rhs);
 }
 
-}  // namespace
+}
